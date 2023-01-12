@@ -44,7 +44,14 @@ function UserDropdown(props: any) {
         }
       >
         {userTypesArray.map((user) => (
-          <button onClick={() => setUserType(user)}>{user}</button>
+          <button
+            onClick={() => {
+              setIsDropdownActive(false);
+              setUserType(user);
+            }}
+          >
+            {user}
+          </button>
         ))}
       </div>
     </div>
