@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import styles from "./index.module.scss";
 
 import SkidataLogo from "../../assets/skidata-logo.png";
+import Main from "./main/main";
 
 function FeatureRequest(props: any) {
   return (
@@ -16,7 +17,7 @@ function FeatureRequest(props: any) {
         <h1 className={styles.logo__container__title}>Feature Request</h1>
       </div>
       <div className={styles.request__content__container}>
-        {props.requestStage === "main" && <p>main</p>}
+        {props.requestStage === "main" && <Main />}
         {props.requestStage === "description" && <p>description</p>}
         {props.requestStage === "customer" && <p>customer</p>}
       </div>

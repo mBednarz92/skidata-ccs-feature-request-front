@@ -1,0 +1,42 @@
+.main__header__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  max-width: 60%;
+
+  h2 {
+    color: #71787d;
+    font-size: 30px;
+    margin-bottom: 0px;
+  }
+
+  p {
+    text-align: center;
+    color: #71787d;
+  }
+}
+
+.main__content__container {
+  display: flex;
+  width: 60%;
+  justify-content: left;
+
+  div {
+    width: 45%;
+    margin: 0 30px;
+
+    h3 {
+      color: #71787d;
+      margin-bottom: 5px;
+    }
+
+    input {
+      width: 80%;
+      height: 28px;
+      border-radius: 4px;
+      border: 1px solid gray;
+    }
+  }
+}
