@@ -1,5 +1,6 @@
 import * as React from "react";
 import { connect } from "react-redux";
+import { setDescription } from "../../../redux/actions/requestStage.actions";
 import NextBackButtons from "../../molecules/nextBackButtons/nextBackButtons";
 import styles from "./main.module.scss";
 
@@ -17,21 +18,21 @@ function Main(props: any) {
       </div>
       <div className={styles.main__content__container}>
         <div>
-          <h3>Request ID:</h3>
+          <h3>Request ID</h3>
           <input type="text" />
-          <h3>Request Date:</h3>
+          <h3>Request Date</h3>
           <input type="text" />
-          <h3>Requester Name:</h3>
+          <h3>Requester Name</h3>
           <input type="text" />
         </div>
         <div>
-          <h3>SD Unit:</h3>
+          <h3>SD Unit</h3>
           <input type="text" />
-          <h3>Department:</h3>
+          <h3>Department</h3>
           <input type="text" />
         </div>
       </div>
-      <NextBackButtons />
+      <NextBackButtons next={() => props.setDescription()} />
     </>
   );
 }
@@ -42,4 +43,10 @@ const mapStateToProps: any = (state: any) => {
   };
 };
 
-export default connect(mapStateToProps)(Main);
+const mapDispatchToProps = (dispatch: any) => {
+  return {
+    setDescription: () => dispatch(setDescription()),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Main);

@@ -5,9 +5,11 @@ import styles from "./nextBackButton.module.scss";
 function NextBackButtons(props: any) {
   return (
     <div className={styles.requestButtonsContainer}>
-      <button className={styles.requestBackButton} onClick={props.back}>
-        BACK
-      </button>
+      {props.requestStage !== "main" && (
+        <button className={styles.requestBackButton} onClick={props.back}>
+          BACK
+        </button>
+      )}
       <button className={styles.requestNextButton} onClick={props.next}>
         {props.requestStage === "customer" ? "SEND" : "NEXT"}
       </button>
