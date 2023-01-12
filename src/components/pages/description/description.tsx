@@ -19,20 +19,28 @@ function Description(props: any) {
           quibusdam.
         </p>
       </div>
-      <div className={styles.main__content__container}>
+      <div className={styles.description__content__container}>
         <div>
-          <h3>Request ID</h3>
-          <input type="text" />
-          <h3>Request Date</h3>
-          <input type="text" />
-          <h3>Requester Name</h3>
-          <input type="text" />
+          <h3>Request Headline</h3>
+          <input
+            type="text"
+            className={styles.description__content__container__requestHeadline}
+          />
         </div>
         <div>
-          <h3>SD Unit</h3>
-          <input type="text" />
-          <h3>Department</h3>
-          <input type="text" />
+          <h3>As a...</h3>
+          <input
+            type="text"
+            className={styles.description__content__container__userDropdown}
+          />
+          <h3>I want</h3>
+          <textarea />
+          <h3>to</h3>
+          <textarea />
+        </div>
+        <div>
+          <h3>Description</h3>
+          <textarea />
         </div>
       </div>
       <NextBackButtons
