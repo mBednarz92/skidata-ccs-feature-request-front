@@ -1,5 +1,4 @@
 import * as React from "react";
-import { MouseEventHandler } from "react";
 import { connect } from "react-redux";
 import styles from "./nextBackButton.module.scss";
 
