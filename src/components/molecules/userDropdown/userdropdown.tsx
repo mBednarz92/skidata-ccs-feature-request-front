@@ -36,7 +36,7 @@ function UserDropdown(props: any) {
       </button>
       <div
         className={styles.description__content__container__dropDown__list}
-        onMouseLeave={() => setTimeout(handleMouseLeave, 500)}
+        onMouseLeave={() => setTimeout(handleMouseLeave, 300)}
         style={
           isDropdownActive
             ? { visibility: "visible" }
