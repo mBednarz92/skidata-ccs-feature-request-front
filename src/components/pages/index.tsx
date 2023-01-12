@@ -15,9 +15,11 @@ function FeatureRequest(props: any) {
         />
         <h1 className={styles.logo__container__title}>Feature Request</h1>
       </div>
-      {props.requestStage === "main" && <p>main</p>}
-      {props.requestStage === "description" && <p>description</p>}
-      {props.requestStage === "customer" && <p>customer</p>}
+      <div className={styles.request__content__container}>
+        {props.requestStage === "main" && <p>main</p>}
+        {props.requestStage === "description" && <p>description</p>}
+        {props.requestStage === "customer" && <p>customer</p>}
+      </div>
     </div>
   );
 }
