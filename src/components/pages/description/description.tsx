@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useState } from "react";
+
 import { connect } from "react-redux";
 import {
   setCustomer,
@@ -9,10 +9,6 @@ import NextBackButtons from "../../molecules/nextBackButtons/nextBackButtons";
 import styles from "./description.module.scss";
 
 function Description(props: any) {
-  function handleMouseLeave() {
-    setIsDropdownActive(false);
-  }
-
   return (
     <>
       <div className={styles.main__header__container}>
