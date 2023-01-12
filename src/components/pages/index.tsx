@@ -5,6 +5,7 @@ import styles from "./index.module.scss";
 import SkidataLogo from "../../assets/skidata-logo.png";
 import Main from "./main/main";
 import Description from "./description/description";
+import Customer from "./customer/customer";
 
 function FeatureRequest(props: any) {
   return (
@@ -20,7 +21,7 @@ function FeatureRequest(props: any) {
       <div className={styles.request__content__container}>
         {props.requestStage === "main" && <Main />}
         {props.requestStage === "description" && <Description />}
-        {props.requestStage === "customer" && <p>customer</p>}
+        {props.requestStage === "customer" && <Customer />}
       </div>
       <p className={styles.request__footer__text}>
         Developed by Skidata CCS team - Developement Enviroment
