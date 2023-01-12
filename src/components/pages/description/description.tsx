@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useState } from "react";
 import { connect } from "react-redux";
 import {
   setCustomer,
@@ -8,6 +9,10 @@ import NextBackButtons from "../../molecules/nextBackButtons/nextBackButtons";
 import styles from "./description.module.scss";
 
 function Description(props: any) {
+  function handleMouseLeave() {
+    setIsDropdownActive(false);
+  }
+
   return (
     <>
       <div className={styles.main__header__container}>
@@ -29,10 +34,7 @@ function Description(props: any) {
         </div>
         <div>
           <h3>As a...</h3>
-          <input
-            type="text"
-            className={styles.description__content__container__userDropdown}
-          />
+
           <h3>I want</h3>
           <textarea />
           <h3>to</h3>
