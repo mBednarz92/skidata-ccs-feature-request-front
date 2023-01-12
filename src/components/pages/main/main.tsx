@@ -1,5 +1,6 @@
 import * as React from "react";
 import { connect } from "react-redux";
+import NextBackButtons from "../../molecules/nextBackButtons/nextBackButtons";
 import styles from "./main.module.scss";
 
 function Main(props: any) {
@@ -30,6 +31,7 @@ function Main(props: any) {
           <input type="text" />
         </div>
       </div>
+      <NextBackButtons />
     </>
   );
 }
