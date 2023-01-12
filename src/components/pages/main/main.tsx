@@ -2,8 +2,6 @@ import * as React from "react";
 import { connect } from "react-redux";
 import styles from "./main.module.scss";
 
-import SkidataLogo from "../../assets/skidata-logo.png";
-
 function Main(props: any) {
   return (
     <>
