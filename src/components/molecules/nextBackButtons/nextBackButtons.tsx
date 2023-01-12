@@ -3,11 +3,6 @@ import { MouseEventHandler } from "react";
 import { connect } from "react-redux";
 import styles from "./nextBackButton.module.scss";
 
-interface backNextButtons {
-  back: MouseEventHandler<HTMLButtonElement>;
-  next: MouseEventHandler<HTMLButtonElement>;
-}
-
 function NextBackButtons(props: any) {
   return (
     <div className={styles.requestButtonsContainer}>
