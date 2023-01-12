@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useState } from "react";
 import { connect } from "react-redux";
 import {
   setCustomer,
@@ -8,6 +9,8 @@ import NextBackButtons from "../../molecules/nextBackButtons/nextBackButtons";
 import styles from "./customer.module.scss";
 
 function Customer(props: any) {
+  const [isCustomerRelated, setIsCustomerRelated] = useState<boolean>(false);
+
   return (
     <>
       <div className={styles.main__header__container}>
@@ -19,22 +22,28 @@ function Customer(props: any) {
           quibusdam.
         </p>
       </div>
-      <div className={styles.main__content__container}>
-        <div>
-          <h3>Request ID</h3>
-          <input type="text" />
-          <h3>Request Date</h3>
-          <input type="text" />
-          <h3>Requester Name</h3>
-          <input type="text" />
-        </div>
-        <div>
-          <h3>SD Unit</h3>
-          <input type="text" />
-          <h3>Department</h3>
-          <input type="text" />
-        </div>
+      <div className={styles.customer__checkbox__container}>
+        <input
+          type="checkbox"
+          onClick={() => setIsCustomerRelated(!isCustomerRelated)}
+        />
+        <p>Specific customer related?</p>
       </div>
+      {isCustomerRelated && (
+        <div className={styles.customer__content__container}>
+          <div>
+            <h3>Project / Customer Name</h3>
+            <input type="text" />
+          </div>
+          <div>
+            <h3>Estimated Call for Tender Deadline</h3>
+            <input type="text" />
+            <h3>Estimated Installation Date</h3>
+            <input type="text" />
+          </div>
+        </div>
+      )}
+
       <NextBackButtons
         next={() => props.setCustomer()}
         back={() => props.setDescription()}

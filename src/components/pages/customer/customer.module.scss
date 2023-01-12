@@ -18,7 +18,23 @@
   }
 }
 
-.main__content__container {
+.customer__checkbox__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  input {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+}
+
+.customer__content__container {
   display: flex;
   width: 60%;
   justify-content: space-between;
