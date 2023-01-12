@@ -20,6 +20,9 @@ function FeatureRequest(props: any) {
         {props.requestStage === "description" && <p>description</p>}
         {props.requestStage === "customer" && <p>customer</p>}
       </div>
+      <p className={styles.request__footer__text}>
+        Developed by Skidata CCS team - Developement Enviroment
+      </p>
     </div>
   );
 }
