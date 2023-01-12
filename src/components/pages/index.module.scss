@@ -1,0 +1,28 @@
+.request__container {
+  background: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.logo__container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.logo__container__title {
+  font-size: 60px;
+  color: #1b6eaa;
+  margin-top: 0px;
+}
+
+.welcomeImage {
+  width: 35%;
+  margin-top: 40px;
+}

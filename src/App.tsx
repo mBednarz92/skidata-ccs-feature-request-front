@@ -1,13 +1,10 @@
-import "./App.css";
 import FeatureRequest from "./components/pages/index";
+import styles from "./App.module.scss";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>Skidata Feature Request</p>
-        <FeatureRequest />
-      </header>
+    <div className={styles.app}>
+      <FeatureRequest />
     </div>
   );
 }
