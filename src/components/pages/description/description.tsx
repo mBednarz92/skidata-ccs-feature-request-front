@@ -2,7 +2,6 @@ import * as React from "react";
 import { connect } from "react-redux";
 import {
   setCustomer,
-  setDescription,
   setMain,
 } from "../../../redux/actions/requestStage.actions";
 import NextBackButtons from "../../molecules/nextBackButtons/nextBackButtons";
