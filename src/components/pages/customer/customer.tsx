@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import {
   setCustomer,
   setDescription,
+  setSummary,
 } from "../../../redux/actions/requestStage.actions";
 import NextBackButtons from "../../molecules/nextBackButtons/nextBackButtons";
 import styles from "./customer.module.scss";
@@ -45,7 +46,7 @@ function Customer(props: any) {
       )}
 
       <NextBackButtons
-        next={() => props.setCustomer()}
+        next={() => props.setSummary()}
         back={() => props.setDescription()}
       />
     </>
@@ -60,7 +61,7 @@ const mapStateToProps: any = (state: any) => {
 
 const mapDispatchToProps = (dispatch: any) => {
   return {
-    setCustomer: () => dispatch(setCustomer()),
+    setSummary: () => dispatch(setSummary()),
     setDescription: () => dispatch(setDescription()),
   };
 };

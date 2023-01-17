@@ -2,6 +2,7 @@ import {
   setCUSTOMER,
   setDESCRIPTION,
   setMAIN,
+  setSUMMARY,
 } from "../constants/requestStage.types";
 
 export const setMain = () => {
@@ -19,5 +20,11 @@ export const setDescription = () => {
 export const setCustomer = () => {
   return {
     type: setCUSTOMER,
+  };
+};
+
+export const setSummary = () => {
+  return {
+    type: setSUMMARY,
   };
 };

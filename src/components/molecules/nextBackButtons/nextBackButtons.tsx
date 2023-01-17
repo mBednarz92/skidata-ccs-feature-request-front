@@ -11,7 +11,7 @@ function NextBackButtons(props: any) {
         </button>
       )}
       <button className={styles.requestNextButton} onClick={props.next}>
-        {props.requestStage === "customer" ? "SEND" : "NEXT"}
+        {props.requestStage === "summary" ? "SEND" : "NEXT"}
       </button>
     </div>
   );
