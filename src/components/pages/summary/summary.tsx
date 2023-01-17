@@ -1,9 +1,9 @@
 import * as React from "react";
-import { useState } from "react";
 import { connect } from "react-redux";
 import {
   setCustomer,
   setDescription,
+  setSummary,
 } from "../../../redux/actions/requestStage.actions";
 import NextBackButtons from "../../molecules/nextBackButtons/nextBackButtons";
 import styles from "./summary.module.scss";
@@ -37,7 +37,7 @@ const mapStateToProps: any = (state: any) => {
 const mapDispatchToProps = (dispatch: any) => {
   return {
     setCustomer: () => dispatch(setCustomer()),
-    setDescription: () => dispatch(setDescription()),
+    setSummary: () => dispatch(setSummary()),
   };
 };
 
