@@ -19,6 +19,10 @@ function Summary(props: any) {
           quibusdam.
         </p>
       </div>
+      <div>
+        <p>RequestID:</p>
+        <p>{props.requester.requestID}</p>
+      </div>
       <NextBackButtons
         next={() => props.setSummary()}
         back={() => props.setCustomer()}
@@ -30,6 +34,7 @@ function Summary(props: any) {
 const mapStateToProps: any = (state: any) => {
   return {
     requestStage: state.requestStage,
+    requester: state.requester,
   };
 };
 
