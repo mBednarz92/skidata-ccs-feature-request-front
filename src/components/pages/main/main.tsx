@@ -34,15 +34,31 @@ function Main(props: any) {
             onChange={(e: any) => setRequesterId(e.target.value)}
           />
           <h3>Request Date</h3>
-          <input type="text" value={requestDate} />
+          <input
+            type="text"
+            value={requestDate}
+            onChange={(e: any) => setRequestDate(e.target.value)}
+          />
           <h3>Requester Name</h3>
-          <input type="text" value={requesterName} />
+          <input
+            type="text"
+            value={requesterName}
+            onChange={(e: any) => setRequesterName(e.target.value)}
+          />
         </div>
         <div>
           <h3>SD Unit</h3>
-          <input type="text" value={sdUnit} />
+          <input
+            type="text"
+            value={sdUnit}
+            onChange={(e: any) => setSdUnit(e.target.value)}
+          />
           <h3>Department</h3>
-          <input type="text" value={department} />
+          <input
+            type="text"
+            value={department}
+            onChange={(e: any) => setDepartment(e.target.value)}
+          />
         </div>
       </div>
       <NextBackButtons
