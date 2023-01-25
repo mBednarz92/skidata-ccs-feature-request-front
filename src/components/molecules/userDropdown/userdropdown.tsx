@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FiChevronUp, FiChevronDown } from "react-icons/fi";
 import { connect } from "react-redux";
 import styles from "./userDropdown.module.scss";
 
@@ -33,6 +34,7 @@ function UserDropdown(props: any) {
         }
       >
         {userType}
+        {isDropdownActive ? <FiChevronUp /> : <FiChevronDown />}
       </button>
       <div
         className={styles.description__content__container__dropDown__list}

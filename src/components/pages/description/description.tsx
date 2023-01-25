@@ -27,23 +27,34 @@ function Description(props: any) {
       </div>
       <div className={styles.description__content__container}>
         <div>
-          <h3>Request Headline</h3>
+          <h3>
+            Request Headline<span> *</span>
+          </h3>
           <input
+            placeholder="For e.g. Flag unwanted guest entries"
             type="text"
             className={styles.description__content__container__requestHeadline}
           />
         </div>
         <div>
-          <h3>As a...</h3>
+          <h3>
+            As a...<span> *</span>
+          </h3>
           <Userdropdown />
-          <h3>I want</h3>
-          <textarea />
-          <h3>to</h3>
-          <textarea />
+          <h3>
+            I want<span> *</span>
+          </h3>
+          <textarea placeholder="For e.g. HSH.Logic / Monitor (?) to inform me about flagged people of interest, when they try to enter the stadium." />
+          <h3>
+            to<span> *</span>
+          </h3>
+          <textarea placeholder="For e.g. Increase stadium security and be able to react to potential threats." />
         </div>
         <div>
-          <h3>Description</h3>
-          <textarea />
+          <h3>
+            Description<span> *</span>
+          </h3>
+          <textarea placeholder="For e.g. Ideally the system sends me a Whatsapp message, but any kind of instant notification will do" />
         </div>
       </div>
       <NextBackButtons

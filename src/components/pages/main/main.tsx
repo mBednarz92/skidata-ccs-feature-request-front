@@ -33,23 +33,28 @@ function Main(props: any) {
       </div>
       <div className={styles.main__content__container}>
         <div>
+          <h3>Requester Name</h3>
+          <div className={styles.person__wraper}>
+            <Person personQuery="me" view={5} />
+          </div>
           <h3>Request ID</h3>
           <input
             type="text"
             value={requesterId}
             onChange={(e: any) => setRequesterId(e.target.value)}
+            style={{ color: "gray" }}
           />
           <h3>Request Date</h3>
-          <input type="text" value={requestDate} />
-          <h3>Requester Name</h3>
-          <div className={styles.person__wraper}>
-            <Person personQuery="me" view={5} />
-          </div>
+          <input type="text" value={requestDate} style={{ color: "gray" }} />
         </div>
         <div>
-          <h3>SD Unit</h3>
+          <h3>
+            SD Unit<span> *</span>
+          </h3>
           <SdSubsidiaries />
-          <h3>Department</h3>
+          <h3>
+            Department<span> *</span>
+          </h3>
           <input
             type="text"
             value={department}

@@ -31,13 +31,19 @@ function Customer(props: any) {
       {isCustomerRelated && (
         <div className={styles.customer__content__container}>
           <div>
-            <h3>Project / Customer Name</h3>
+            <h3>
+              Project / Customer Name <span> *</span>
+            </h3>
             <input type="text" />
           </div>
           <div>
-            <h3>Estimated Call for Tender Deadline</h3>
+            <h3>
+              Estimated Call for Tender Deadline <span> *</span>
+            </h3>
             <input type="text" />
-            <h3>Estimated Installation Date</h3>
+            <h3>
+              Estimated Installation Date <span> *</span>
+            </h3>
             <input type="text" />
           </div>
         </div>
