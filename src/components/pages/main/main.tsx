@@ -8,15 +8,26 @@ import { Requester } from "../../interfaces/requester";
 import NextBackButtons from "../../molecules/nextBackButtons/nextBackButtons";
 import SdSubsidiaries from "../../molecules/sdSubsidiaries/sdSubsidiaries";
 import styles from "./main.module.scss";
+import { Providers } from "@microsoft/mgt-element";
+import { arrayBuffer } from "stream/consumers";
 
 function Main(props: any) {
   let date = new Date(Date.now());
 
   const [requesterId, setRequesterId] = useState<string>("87654321-TEST");
   const [requestDate] = useState(date.toLocaleDateString());
-  const [requesterName] = useState<string>("");
-  const [sdUnit] = useState<string>("");
+  const [requesterName, setRequesterName] = useState(null);
+  const [sdUnit, setSdUnit] = useState<string>("...");
   const [department, setDepartment] = useState<string>("");
+
+  if (requesterName == null) {
+    Providers.globalProvider.graph.client
+      .api("me")
+      .get()
+      .then((gotMe) => {
+        setRequesterName(gotMe.displayName);
+      });
+  }
 
   return (
     <>
@@ -51,7 +62,7 @@ function Main(props: any) {
           <h3>
             SD Unit<span> *</span>
           </h3>
-          <SdSubsidiaries />
+          <SdSubsidiaries sdUnit={sdUnit} setSdUnit={setSdUnit} />
           <h3>
             Department<span> *</span>
           </h3>

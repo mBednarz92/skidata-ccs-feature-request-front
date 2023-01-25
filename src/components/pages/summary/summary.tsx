@@ -19,10 +19,21 @@ function Summary(props: any) {
           quibusdam.
         </p>
       </div>
+      <h2>Requester</h2>
       <div>
-        <p>RequestID:</p>
+        <h3>Requester Name:</h3>
+        <p>{props.requester.requesterName}</p>
+        <h3>RequestID:</h3>
         <p>{props.requester.requestID}</p>
+        <h3>Request Date:</h3>
+        <p>{props.requester.requestDate}</p>
+        <h3>SD Unit:</h3>
+        <p>{props.requester.sdUnit}</p>
+        <h3>Departement:</h3>
+        <p>{props.requester.department}</p>
       </div>
+      <h2>Description</h2>
+      <h2>Customer</h2>
       <NextBackButtons
         next={() => props.setSummary()}
         back={() => props.setCustomer()}

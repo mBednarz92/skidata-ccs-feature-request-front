@@ -1,10 +1,8 @@
 import { useState } from "react";
-import { connect } from "react-redux";
 import styles from "./sdSubsidiaries.module.scss";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 
 function SdSubsidiaries(props: any) {
-  const [userType, setUserType] = useState<string>("...");
   const [isDropdownActive, setIsDropdownActive] = useState<boolean>(false);
 
   const sdSubsidiary = [
@@ -49,7 +47,7 @@ function SdSubsidiaries(props: any) {
             : {}
         }
       >
-        {userType}
+        {props.sdUnit}
         {isDropdownActive ? <FiChevronUp /> : <FiChevronDown />}
       </button>
       <div
@@ -61,14 +59,14 @@ function SdSubsidiaries(props: any) {
             : { visibility: "hidden" }
         }
       >
-        {sdSubsidiary.map((user) => (
+        {sdSubsidiary.map((unit) => (
           <button
             onClick={() => {
               setIsDropdownActive(false);
-              setUserType(user);
+              props.setSdUnit(unit);
             }}
           >
-            {user}
+            {unit}
           </button>
         ))}
       </div>
@@ -76,10 +74,4 @@ function SdSubsidiaries(props: any) {
   );
 }
 
-const mapStateToProps: any = (state: any) => {
-  return {
-    requestStage: state.requestStage,
-  };
-};
-
-export default connect(mapStateToProps)(SdSubsidiaries);
+export default SdSubsidiaries;
