@@ -9,7 +9,6 @@ import NextBackButtons from "../../molecules/nextBackButtons/nextBackButtons";
 import SdSubsidiaries from "../../molecules/sdSubsidiaries/sdSubsidiaries";
 import styles from "./main.module.scss";
 import { Providers } from "@microsoft/mgt-element";
-import { arrayBuffer } from "stream/consumers";
 
 function Main(props: any) {
   let date = new Date(Date.now());
