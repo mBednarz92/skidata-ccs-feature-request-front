@@ -36,7 +36,6 @@ function App() {
       ) : (
         <div className={styles.welcome__container}>
           <div className={styles.welcome__box}>
-            <h1 className={styles.welcome__header}>Welcome to</h1>
             <div className={styles.logo__container}>
               <img
                 alt="skidata_logo"
@@ -46,7 +45,7 @@ function App() {
               <h1 className={styles.logo__container__title}>Feature Request</h1>
             </div>
             <Login />
-            <p>Please sign in with Skidata MS account to create request.</p>
+            <p>Please sign in with Skidata MS account to continue.</p>
           </div>
         </div>
       )}
