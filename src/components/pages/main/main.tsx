@@ -13,9 +13,9 @@ function Main(props: any) {
   let date = new Date(Date.now());
 
   const [requesterId, setRequesterId] = useState<string>("87654321-TEST");
-  const [requestDate, setRequestDate] = useState(date.toLocaleDateString());
-  const [requesterName, setRequesterName] = useState<string>("");
-  const [sdUnit, setSdUnit] = useState<string>("");
+  const [requestDate] = useState(date.toLocaleDateString());
+  const [requesterName] = useState<string>("");
+  const [sdUnit] = useState<string>("");
   const [department, setDepartment] = useState<string>("");
 
   return (
