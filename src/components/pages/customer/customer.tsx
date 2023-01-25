@@ -16,10 +16,9 @@ function Customer(props: any) {
       <div className={styles.main__header__container}>
         <h2>Customer</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam explicabo
-          maiores tenetur totam eum deleniti maxime illo repellat. Placeat
-          labore vero deserunt? Voluptates amet ea possimus corrupti dicta est
-          quibusdam.
+          If your request is related to a specific customer or project, please
+          tick the box and let us know some basic data, so we can better
+          prioritize your request and plan the implementation.
         </p>
       </div>
       <div className={styles.customer__checkbox__container}>

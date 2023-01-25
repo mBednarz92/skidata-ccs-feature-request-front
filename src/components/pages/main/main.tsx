@@ -1,3 +1,4 @@
+import { Person } from "@microsoft/mgt-react";
 import * as React from "react";
 import { useState } from "react";
 import { connect } from "react-redux";
@@ -5,11 +6,14 @@ import { setRequester } from "../../../redux/actions/requester.actions";
 import { setDescription } from "../../../redux/actions/requestStage.actions";
 import { Requester } from "../../interfaces/requester";
 import NextBackButtons from "../../molecules/nextBackButtons/nextBackButtons";
+import SdSubsidiaries from "../../molecules/sdSubsidiaries/sdSubsidiaries";
 import styles from "./main.module.scss";
 
 function Main(props: any) {
+  let date = new Date(Date.now());
+
   const [requesterId, setRequesterId] = useState<string>("87654321-TEST");
-  const [requestDate, setRequestDate] = useState<string>("");
+  const [requestDate, setRequestDate] = useState(date.toLocaleDateString());
   const [requesterName, setRequesterName] = useState<string>("");
   const [sdUnit, setSdUnit] = useState<string>("");
   const [department, setDepartment] = useState<string>("");
@@ -19,10 +23,12 @@ function Main(props: any) {
       <div className={styles.main__header__container}>
         <h2>Requester</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam explicabo
-          maiores tenetur totam eum deleniti maxime illo repellat. Placeat
-          labore vero deserunt? Voluptates amet ea possimus corrupti dicta est
-          quibusdam.
+          Please use this form to request product changes, additions, features
+          for Event specific topics and software. This could be Handshake.Logic,
+          sweb.eTicket (wallet functionality), mobile.gate, etc. All other
+          request can currently not be handled within this tool. Please refer to
+          the according processes of the responsible development teams. You can
+          change the field entries in case you are requesting for a third party.
         </p>
       </div>
       <div className={styles.main__content__container}>
@@ -34,25 +40,15 @@ function Main(props: any) {
             onChange={(e: any) => setRequesterId(e.target.value)}
           />
           <h3>Request Date</h3>
-          <input
-            type="text"
-            value={requestDate}
-            onChange={(e: any) => setRequestDate(e.target.value)}
-          />
+          <input type="text" value={requestDate} />
           <h3>Requester Name</h3>
-          <input
-            type="text"
-            value={requesterName}
-            onChange={(e: any) => setRequesterName(e.target.value)}
-          />
+          <div className={styles.person__wraper}>
+            <Person personQuery="me" view={5} />
+          </div>
         </div>
         <div>
           <h3>SD Unit</h3>
-          <input
-            type="text"
-            value={sdUnit}
-            onChange={(e: any) => setSdUnit(e.target.value)}
-          />
+          <SdSubsidiaries />
           <h3>Department</h3>
           <input
             type="text"

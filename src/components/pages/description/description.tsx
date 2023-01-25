@@ -15,10 +15,14 @@ function Description(props: any) {
       <div className={styles.main__header__container}>
         <h2>Description</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam explicabo
-          maiores tenetur totam eum deleniti maxime illo repellat. Placeat
-          labore vero deserunt? Voluptates amet ea possimus corrupti dicta est
-          quibusdam.
+          Add a title to your request. Try to describe the feature / issue in
+          form of a user story. If none of the roles fit your user, just add As
+          a f.i. Software Trainer in the ‚I want‘ box and we will add the user
+          to the drop down list. The ‚to‘ box shall explain what it is you are
+          trying to achieve/solve. If you have an example of a solution in mind,
+          you can mention this in the description. If you have specific
+          documents, screenshots, photos or sketches that help to understand the
+          issue, feel free to upload these documents here.
         </p>
       </div>
       <div className={styles.description__content__container}>

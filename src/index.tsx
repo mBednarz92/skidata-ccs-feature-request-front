@@ -11,6 +11,7 @@ import { Msal2Provider } from "@microsoft/mgt-msal2-provider";
 
 Providers.globalProvider = new Msal2Provider({
   clientId: "ec679a32-a527-4154-b583-43c2c522bf38",
+  scopes: ["profile", "user.Read"],
 });
 
 const root = ReactDOM.createRoot(
