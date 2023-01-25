@@ -1,10 +1,14 @@
 import FeatureRequest from "./components/pages/index";
 import styles from "./App.module.scss";
 
+import { Login } from "@microsoft/mgt-react";
+
 function App() {
   return (
     <div className={styles.app}>
-      <FeatureRequest />
+      <header>
+        <Login />
+      </header>
     </div>
   );
 }
